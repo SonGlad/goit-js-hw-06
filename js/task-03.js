@@ -16,8 +16,8 @@ const images = [
 const listEl = document.querySelector(`.gallery`);
 listEl.style.display = "grid";
 listEl.style.gap = "12px";
-const imgEl = document.createElement(`img`);
-const imgListEl = images.map(element => 
-  `<li><img src = ${element.url} alt = ${element.alt} hight=600px width=600px></img></li>`
-).join(" "); 
+
+const imgListEl = images.map((data) => 
+  `<li class = "item"><img src = ${data.url} alt = ${data.alt} class ="image" hight=600px width=600px></img></li>`
+).join(""); 
    listEl.insertAdjacentHTML(`beforeend`, imgListEl);
