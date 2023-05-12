@@ -9,3 +9,17 @@ liItemEl.forEach(item => {
   console.log(`Category: ${liNameEl}`);
   console.log(`Elements: ${liListEl.length}`);
 });
+
+
+// const ulItemEl = document.querySelector("#categories").children
+// console.log(`Number of categories: ${ulItemEl.length}`);
+
+// const liItemEl = document.querySelectorAll(".item");
+// liItemEl.forEach(item => {
+//   const liNameEl = item.firstElementChild.textContent;
+//   const liListEl = item.lastElementChild.children;
+
+//   console.log(`Category: ${liNameEl}`);
+//   console.log(`Elements: ${liListEl.length}`);
+// });
+
