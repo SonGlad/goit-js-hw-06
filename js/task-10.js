@@ -18,7 +18,7 @@ function createBoxes(amount) {
   destroyBoxes();
 
   const boxes = [];
-  for (let i = 1; i <= amount; i++) {
+  for (let i = 1; i <= amount; i += 1) {
     const box = document.createElement("div");
 
     const size = 30 + i * 10 + "px";
@@ -29,7 +29,19 @@ function createBoxes(amount) {
     box.style.margin = "6px";
     boxes.push(box);
   }
+  // const boxes = [];
+  // let size = 30;
+  // for(let i of Array(amount)){
+  //   const box = document.createElement("div");
+  //   size += 10;
+    
 
+  //   box.style.width = size + "px";
+  //   box.style.height = size + "px";
+  //   box.style.backgroundColor = getRandomHexColor();
+  //   box.style.margin = "6px";
+  //   boxes.push(box);
+  // }
   boxesContainer.append(...boxes);
 }
 
