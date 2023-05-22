@@ -10,6 +10,12 @@ const btnCreate = document.querySelector("button[data-create]");
 const btnDestroy = document.querySelector("button[data-destroy]");
 
 btnCreate.addEventListener("click", () => {
+  const maxAttributeValue = inputEl.max;
+
+  if(Number(inputEl.value) > maxAttributeValue ){
+    alert(`Please enter amount in range between 1 to 100`);
+    return;
+  }
   const amount = Number(inputEl.value);
   createBoxes(amount);
 });
@@ -28,20 +34,7 @@ function createBoxes(amount) {
     box.style.backgroundColor = getRandomHexColor();
     box.style.margin = "6px";
     boxes.push(box);
-  }
-  // const boxes = [];
-  // let size = 30;
-  // for(let i of Array(amount)){
-  //   const box = document.createElement("div");
-  //   size += 10;
-    
-
-  //   box.style.width = size + "px";
-  //   box.style.height = size + "px";
-  //   box.style.backgroundColor = getRandomHexColor();
-  //   box.style.margin = "6px";
-  //   boxes.push(box);
-  // }
+  }; 
   boxesContainer.append(...boxes);
 }
 
