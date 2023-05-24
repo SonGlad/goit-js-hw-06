@@ -17,6 +17,7 @@ refs.btnCreatEl.addEventListener('click', () => {
 
   if (amount > maxAmout){
     alert(`Please enter value in range between 1 to 100`);
+    refs.inputEl.value = "";
     return;
   } 
   createBox(amount);
@@ -26,7 +27,7 @@ refs.btnDestrEl.addEventListener('click', destroyBox);
 
 
 function createBox(amount){
-  destroyBox();
+  // destroyBox();
   
   const boxes = [];
   for(let i = 1; i <= amount; i += 1){
@@ -45,4 +46,5 @@ function createBox(amount){
 
 function destroyBox(){
   refs.boxesEl.innerHTML = "";
+  refs.inputEl.value = "";
 };
