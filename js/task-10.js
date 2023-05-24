@@ -11,20 +11,21 @@ const refs = {
   boxesEl: document.querySelector("#boxes"),
 };
 
-refs.btnCreatEl.addEventListener('click', () => {
-  const amount = Number(refs.inputEl.value);
-  const maxAmout = refs.inputEl.max;
-
-  if (amount > maxAmout){
-    alert(`Please enter value in range between 1 to 100`);
-    refs.inputEl.value = "";
-    return;
-  } 
-  createBox(amount);
-});
-
+refs.btnCreatEl.addEventListener('click', inputChecksAndTransformation);
 refs.btnDestrEl.addEventListener('click', destroyBox);
 
+
+function inputChecksAndTransformation(){
+    const amount = Number(refs.inputEl.value);
+    const maxAmout = refs.inputEl.max;
+  
+    if (amount > maxAmout){
+      alert(`Please choose the value in range between 1 to 100 in input field `);
+      refs.inputEl.value = "";
+      return;
+    } 
+    createBox(amount);
+  };
 
 function createBox(amount){
   // destroyBox();
@@ -42,7 +43,6 @@ function createBox(amount){
   };
   refs.boxesEl.append(...boxes);
 };
-
 
 function destroyBox(){
   refs.boxesEl.innerHTML = "";
