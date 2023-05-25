@@ -28,7 +28,7 @@ function inputChecksAndTransformation(){
   };
 
 function createBox(amount){
-  // destroyBox();
+  destroyBox();
   
   const boxes = [];
   for(let i = 1; i <= amount; i += 1){
